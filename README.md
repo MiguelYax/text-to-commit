@@ -6,5 +6,23 @@ Just for Fun - Convert string to a banner using commit contribution history from
 
 # Instalation
 ```sh
-npm install text-to-commit
+npm install -g text-to-commit
 ```
+
+# Examples
+
+![Miguel Yax](./img/full-name.png)
+
+![The Wizzard!](./img/the-wizzard.png)
+
+![Warlord!](./img/warlord.png)
+
+# Getting Started
+1. Create an empty repository.
+    Repo: [Commit Banner Tester](https://github.com/MiguelYax/commit-banner-tester)
+2. Run te command at the target repository
+    ![Guatemala output](./img/guatemala-cmd.png)
+3. Push your changes to the remote repository.
+   > Note: Commit Contribution history only applies to main branch for each repository.
+4. Contribution history example: 
+    ![Guatemala](./img/guatemala.png)
