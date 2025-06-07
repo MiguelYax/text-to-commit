@@ -1,6 +1,6 @@
 {
   "name": "text-to-commit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Just for Fun - Convert string to a banner using commit contribution history",
   "main": "text.js",
   "bin": {
@@ -18,7 +18,7 @@
     "test": "echo 'test TBD!'",
     "postversion": "git push && git push --tags"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/MiguelYax/text-to-commit.git"
   },
