@@ -1,6 +1,6 @@
 {
   "name": "text-to-commit",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Just for Fun - Convert string to a banner using commit contribution history",
   "main": "text.js",
   "bin": {
@@ -9,6 +9,11 @@
   "dependencies": {
     "yax-cli": "^0.5.1"
   },
+  "files": [
+    "/bin",
+    "/lib",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
