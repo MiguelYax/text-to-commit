@@ -18,6 +18,10 @@
     "test": "echo 'test TBD!'",
     "postversion": "git push && git push --tags"
   },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelYax/text-to-commit.git"
+  },
   "author": "Miguel Yax <mig_dj@hotmail.com>",
   "license": "MIT",
   "volta": {
