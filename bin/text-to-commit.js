@@ -17,9 +17,9 @@ const main = async () => {
             {
                 type: 'input',
                 name: 'text',
-                question: 'Text to convert to commit history  (10 chars max):',
+                question: 'Text to convert to commit history  (12 chars max):',
                 validate: (input) => {
-                    return input.trim() !== '' && input.length <= 10;
+                    return input.trim() !== '' && input.length <= 12;
                 }
             }
         ],
