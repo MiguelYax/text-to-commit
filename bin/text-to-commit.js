@@ -10,24 +10,30 @@ const main = async () => {
             {
                 type: 'input',
                 name: 'startDate',
-                question: 'Enter the start date for the commit history (YYYY-MM-DD):',
+                question: 'Provide a Sunday start date (Format: YYYY-MM-DD):',
                 validate: (input) => {
                     const datePattern = /^\d{4}-\d{2}-\d{2}$/;
-                    return datePattern.test(input);
+                    const validDateFormat = datePattern.test(input)
+                    if (!validDateFormat) {
+                        return false;
+                    }
+                    const date = new Date(input);
+                    const isSunday = date.getDay() === 0;
+                    return isSunday;
                 }
             },
             {
                 type: 'input',
                 name: 'text',
-                question: 'Text to convert to commit history  (8 chars max):',
+                question: 'Text to convert to commit history  (10 chars max):',
                 validate: (input) => {
-                    return input.trim() !== '' && input.length <= 8;
+                    return input.trim() !== '' && input.length <= 10;
                 }
             }
         ],
     )
 
-   const schedule = getCommitSchedule(values.text, values.startDate);
+    const schedule = getCommitSchedule(values.text, values.startDate);
     const { generate } = await prompt(
         [
             {
@@ -40,11 +46,14 @@ const main = async () => {
     );
     if (generate) {
         for (const entry of schedule) {
-            if (entry.commit) {
-                addCommit(entry);
-            }
+            addCommit(entry);
         }
     }
+
+    console.log('Commit history generated successfully.');
+    console.log('You can now push your changes to the remote repository.');
+    console.log('Use "git push" to upload your commits.');
+    console.log('Thank you for using the text-to-commit tool!');
 }
 
 main();
