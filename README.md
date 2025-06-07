@@ -24,5 +24,9 @@ npm install -g text-to-commit
     ![Guatemala output](./img/guatemala-cmd.png)
 3. Push your changes to the remote repository.
    > Note: Commit Contribution history only applies to main branch for each repository.
+   - => Tip: You could set your test branch as main by configurin it at repository settings.
+   ![General Settings](./img/repo-general-config.png)
 4. Contribution history example: 
     ![Guatemala](./img/guatemala.png)
+
+# Thank you for using the text-to-commit tool!
