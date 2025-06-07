@@ -1,6 +1,6 @@
 {
   "name": "text-to-commit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Just for Fun - Convert string to a banner using commit contribution history",
   "main": "text.js",
   "bin": {
