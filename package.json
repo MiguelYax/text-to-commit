@@ -1,0 +1,20 @@
+{
+  "name": "text-to-commit",
+  "version": "1.0.0",
+  "description": "Just for Fun - Convert string to a banner using commit contribution history",
+  "main": "text.js",
+  "bin": {
+    "text-to-commit": "./bin/text-to-commit.js"
+  },
+  "dependencies": {
+    "yax-cli": "^0.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel Yax <mig_dj@hotmail.com>",
+  "license": "MIT",
+  "volta": {
+    "node": "22.16.0"
+  }
+}
