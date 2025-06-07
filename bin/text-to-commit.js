@@ -4,6 +4,7 @@ const { prompt } = require('yax-cli');
 const { getCommitSchedule } = require('../lib/converter');
 const { addCommit } = require('../lib/gits');
 
+const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 const main = async () => {
     const values = await prompt(
         [
@@ -11,16 +12,7 @@ const main = async () => {
                 type: 'input',
                 name: 'startDate',
                 question: 'Provide a Sunday start date (Format: YYYY-MM-DD):',
-                validate: (input) => {
-                    const datePattern = /^\d{4}-\d{2}-\d{2}$/;
-                    const validDateFormat = datePattern.test(input)
-                    if (!validDateFormat) {
-                        return false;
-                    }
-                    const date = new Date(input);
-                    const isSunday = date.getDay() === 0;
-                    return isSunday;
-                }
+                validate: (input) => datePattern.test(input)
             },
             {
                 type: 'input',
